@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import FocusButton from './focus-button'
+import UnfocusButton from './unfocus-button'
+
 class BigButton extends Component {
   constructor(props) {
     super(props);
@@ -16,22 +19,13 @@ class BigButton extends Component {
 
   render(){
     return(
-      <div style={{
-        position: 'fixed',
-        zIndex: 1000,
-        bottom: '35px',
-        right: '35px'
-      }}>
-        <div style={{
-          width: '80px',
-          height: '80px',
-          cursor: 'pointer',
-          background: 'green',
-          borderRadius: '80px',
-          boxShadow: '4px 4px 4px grey'
-        }}>
-          { this.props.focus ? '1' : '0' }
-        </div>
+      <div>
+        {/* If not focused render Focus Button else render Unfocus Button */}
+        {
+          !this.props.focus ?
+          <FocusButton /> :
+          <UnfocusButton />
+        }
       </div>
     )
   }
