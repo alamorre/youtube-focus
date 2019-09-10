@@ -1,0 +1,35 @@
+# dependencies
+/node_modules
+
+# testing
+*.log
+/coverage
+
+# production
+/build
+
+# build
+bundle.js
+
+# misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+*.icloud
+
+# Logging and photo outputs are excluded for now
+tests_output/*
+tests/tests_photos/*
+chromedriver.log
+
+# vrt
+tests/vrt/diff/
+tests/vrt/latest/
