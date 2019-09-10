@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 import FocusButton from './focus-button'
 import UnfocusButton from './unfocus-button'
 
 class BigButton extends Component {
+<<<<<<< HEAD
   constructor(props) {
     super(props);
   }
@@ -15,6 +15,8 @@ class BigButton extends Component {
     });
   }
 
+=======
+>>>>>>> origin/master
   render(){
     return(
       <div id='button-toggler' onClick={this.onButtonClick.bind(this)}>
@@ -29,10 +31,4 @@ class BigButton extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    focus: state.focus
-  };
-};
-
-export default connect(mapStateToProps)(BigButton);
+export default BigButton;
