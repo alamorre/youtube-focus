@@ -9,17 +9,15 @@ class BigButton extends Component {
     super(props);
   }
 
-  componentDidMount() {
-    document.addEventListener('click', () => {
-      this.props.dispatch({
-        type: 'TOGGLE_FOCUS'
-      });
+  onButtonClick(){
+    this.props.dispatch({
+      type: 'TOGGLE_FOCUS'
     });
   }
 
   render(){
     return(
-      <div>
+      <div id='button-toggler' onClick={this.onButtonClick.bind(this)}>
         {/* If not focused render Focus Button else render Unfocus Button */}
         {
           !this.props.focus ?

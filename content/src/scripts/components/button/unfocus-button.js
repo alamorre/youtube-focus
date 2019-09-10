@@ -18,7 +18,7 @@ class UnfocusButton extends Component {
           borderRadius: '80px',
           boxShadow: '4px 4px 4px grey',
         }}>
-          Unfocus
+          
         </div>
       </div>
     )

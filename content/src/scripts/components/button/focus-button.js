@@ -18,7 +18,7 @@ class FocusButton extends Component {
           borderRadius: '80px',
           boxShadow: '4px 4px 4px grey'
         }}>
-          Focus
+          
         </div>
       </div>
     )
