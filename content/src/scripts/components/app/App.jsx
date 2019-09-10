@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
 import BigButton from '../button';
-import { HomeCover } from '../covers';
+import PageCovers from '../covers';
 
 export default class App extends Component {
   render() {
     return (
       <div>
         {/* Render the Home Cover */}
-        <HomeCover />
+        <PageCovers />
 
         {/* Render the Button */}
         <BigButton />

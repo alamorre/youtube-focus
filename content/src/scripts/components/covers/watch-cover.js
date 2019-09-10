@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 
-class HomeCover extends Component {
+class WatchCover extends Component {
   render(){
     {/* Cover Nothing if Unfocused */}
     if(!this.props.focus){
@@ -17,7 +17,7 @@ class HomeCover extends Component {
           top: '0px',
           height: '100vh',
           width: '100vw',
-          background: 'white',
+          background: 'pink',
           zIndex: 999
         }}
       />
@@ -31,4 +31,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(HomeCover);
+export default connect(mapStateToProps)(WatchCover);

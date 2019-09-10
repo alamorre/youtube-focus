@@ -1,5 +1,5 @@
 {
-  "name": "rcr-example",
+  "name": "youtube-focus",
   "version": "0.0.1",
   "private": true,
   "description": "",
@@ -7,11 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/gulp"
   },
-  "author": "Tyler Shaddix",
+  "author": "Adam La Morre",
   "dependencies": {
+    "history": "^4.9.0",
     "react": "^15.5.0",
     "react-dom": "^15.5.0",
     "react-redux": "^4.0.0",
+    "react-router-dom": "^5.0.1",
     "redux": "^3.0.4",
     "webext-redux": "^2.1.2"
   },
@@ -20,7 +22,7 @@
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "gulp": "^4.0.2",
+    "gulp": "^3.0.0",
     "gulp-load-plugins": "^2.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.7",
