@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+
+import { styles } from './styles';
 
 class UnfocusButton extends Component {
   render(){
     return (
-      <div style={{
-        position: 'fixed',
-        zIndex: 1000,
-        bottom: '35px',
-        right: '35px'
-      }}>
+      <div style={ styles.button }>
         <div style={{
           width: '80px',
           height: '80px',
@@ -18,7 +14,7 @@ class UnfocusButton extends Component {
           borderRadius: '80px',
           boxShadow: '4px 4px 4px grey',
         }}>
-          
+
         </div>
       </div>
     )
