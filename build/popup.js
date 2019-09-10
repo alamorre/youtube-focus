@@ -11054,12 +11054,7 @@ var App = function (_Component) {
   _createClass(App, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        'Count: ',
-        this.props.focus ? '1' : '0'
-      );
+      return _react2.default.createElement('div', null);
     }
   }]);
 

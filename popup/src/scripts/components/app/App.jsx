@@ -8,9 +8,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        Count: { this.props.focus ? '1' : '0' }
-      </div>
+      <div />
     );
   }
 }
