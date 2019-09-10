@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux';
 
-import count from './count';
+import focus from './focus';
 
 export default combineReducers({
-  count
+  focus
 });

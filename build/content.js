@@ -11063,7 +11063,7 @@ var App = function (_Component) {
 
       document.addEventListener('click', function () {
         _this2.props.dispatch({
-          type: 'ADD_COUNT'
+          type: 'TOGGLE_FOCUS'
         });
       });
     }
@@ -11083,11 +11083,12 @@ var App = function (_Component) {
           { style: {
               width: '80px',
               height: '80px',
+              cursor: 'pointer',
               background: 'green',
               borderRadius: '80px',
-              boxShadow: '4px 4px 4px grey' }
-          },
-          this.props.count
+              boxShadow: '4px 4px 4px grey'
+            } },
+          this.props.focus ? '1' : '0'
         )
       );
     }
@@ -11098,7 +11099,7 @@ var App = function (_Component) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    count: state.count
+    focus: state.focus
   };
 };
 

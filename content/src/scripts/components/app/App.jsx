@@ -9,7 +9,7 @@ class App extends Component {
   componentDidMount() {
     document.addEventListener('click', () => {
       this.props.dispatch({
-        type: 'ADD_COUNT'
+        type: 'TOGGLE_FOCUS'
       });
     });
   }
@@ -25,11 +25,12 @@ class App extends Component {
         <div style={{
           width: '80px',
           height: '80px',
-          background: 'green', 
+          cursor: 'pointer',
+          background: 'green',
           borderRadius: '80px',
-          boxShadow: '4px 4px 4px grey' }}
-        >
-          {this.props.count}
+          boxShadow: '4px 4px 4px grey'
+      }}>
+          { this.props.focus ? '1' : '0' }
         </div>
       </div>
     );
@@ -38,7 +39,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    count: state.count
+    focus: state.focus
   };
 };
 

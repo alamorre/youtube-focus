@@ -983,15 +983,15 @@ var store = (0, _redux.createStore)(_reducers2.default, {});
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var initialState = 0;
+var initialState = false;
 
 exports.default = function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments[1];
 
   switch (action.type) {
-    case 'ADD_COUNT':
-      return state + (action.payload || 1);
+    case 'TOGGLE_FOCUS':
+      return !state;
     default:
       return state;
   }
@@ -1010,14 +1010,14 @@ Object.defineProperty(exports, "__esModule", {
 
 var _redux = __webpack_require__(6);
 
-var _count = __webpack_require__(13);
+var _focus = __webpack_require__(13);
 
-var _count2 = _interopRequireDefault(_count);
+var _focus2 = _interopRequireDefault(_focus);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = (0, _redux.combineReducers)({
-  count: _count2.default
+  focus: _focus2.default
 });
 
 /***/ }),

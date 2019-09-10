@@ -11052,24 +11052,13 @@ var App = function (_Component) {
   }
 
   _createClass(App, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      document.addEventListener('click', function () {
-        _this2.props.dispatch({
-          type: 'ADD_COUNT'
-        });
-      });
-    }
-  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
         null,
         'Count: ',
-        this.props.count
+        this.props.focus ? '1' : '0'
       );
     }
   }]);
@@ -11079,7 +11068,7 @@ var App = function (_Component) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    count: state.count
+    focus: state.focus
   };
 };
 
