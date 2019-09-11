@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 import FocusButton from './focus-button'
 import UnfocusButton from './unfocus-button'
@@ -13,6 +12,20 @@ class BigButton extends Component {
     this.props.dispatch({
       type: 'TOGGLE_FOCUS'
     });
+  }
+
+  /**
+  * Update the current route three times a second
+  */
+  componentDidMount(){
+    setInterval(function(){
+      console.log(this.props.route)
+
+      this.props.dispatch({
+        type: 'SET_ROUTE',
+        payload: window.location.pathname
+      });
+    }.bind(this), 333);
   }
 
   render(){
@@ -29,10 +42,15 @@ class BigButton extends Component {
   }
 }
 
+<<<<<<< HEAD
 const mapStateToProps = (state) => {
   return {
-    focus: state.focus
+    focus: state.focus,
+    route: state.route
   };
 };
 
 export default connect(mapStateToProps)(BigButton);
+=======
+export default BigButton;
+>>>>>>> origin/master
