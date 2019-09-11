@@ -19,5 +19,9 @@
       "css": [],
       "js": ["content.js"]
     }
+  ],
+  "permissions": [
+    "tabs",
+    "*://www.youtube.com/*"
   ]
 }

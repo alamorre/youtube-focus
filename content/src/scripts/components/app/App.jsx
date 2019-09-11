@@ -10,8 +10,6 @@ class App extends Component {
   */
   componentDidMount(){
     setInterval(function(){
-      console.log(this.props.route)
-
       this.props.dispatch({
         type: 'SET_ROUTE',
         payload: window.location.pathname
@@ -21,7 +19,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div id='app-container'>
         {/* Render the Home Cover */}
         <PageCovers />
 

@@ -7,16 +7,19 @@ class UnfocusButton extends Component {
   render(){
     return (
       <div style={ styles.button }>
-        <div style={{
-          width: '80px',
-          height: '80px',
-          cursor: 'pointer',
-          background: '#fff',
-          border: '2px solid #f5222d',
-          borderRadius: '80px',
-          boxShadow: '4px 4px 4px grey',
-          textAlign: 'center',
-        }}>
+        <div
+          id='unfocus-button'
+          style={{
+            width: '80px',
+            height: '80px',
+            cursor: 'pointer',
+            background: '#fff',
+            border: '2px solid #f5222d',
+            borderRadius: '80px',
+            boxShadow: '4px 4px 4px grey',
+            textAlign: 'center',
+          }}
+        >
           <div style={{ position: 'relative', top: '8px' }}>
             {/* Icon to Focus */}
             <Icon

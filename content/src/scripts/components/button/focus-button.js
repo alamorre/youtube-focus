@@ -7,15 +7,18 @@ class FocusButton extends Component {
   render(){
     return (
       <div style={ styles.button }>
-        <div style={{
-          width: '80px',
-          height: '80px',
-          cursor: 'pointer',
-          background: '#f5222d',
-          borderRadius: '80px',
-          boxShadow: '4px 4px 4px grey',
-          textAlign: 'center',
-        }}>
+        <div
+          id='focus-button'
+          style={{
+            width: '80px',
+            height: '80px',
+            cursor: 'pointer',
+            background: '#f5222d',
+            borderRadius: '80px',
+            boxShadow: '4px 4px 4px grey',
+            textAlign: 'center',
+          }}
+        >
           <div style={{ position: 'relative', top: '8px' }}>
             {/* Icon to Focus */}
             <Icon

@@ -10,18 +10,8 @@ class WatchCover extends Component {
 
     {/* Cover Everything if Focused */}
     return(
-      <div
-        id='home-cover'
-        style={{
-          position: 'fixed',
-          top: '0px',
-          right: '0px',
-          height: '100vh',
-          width: '35vw',
-          background: 'white',
-          zIndex: 999
-        }}
-      />
+      <div>
+      </div>
     )
   }
 }
