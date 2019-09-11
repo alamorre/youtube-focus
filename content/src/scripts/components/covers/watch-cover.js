@@ -15,9 +15,10 @@ class WatchCover extends Component {
         style={{
           position: 'fixed',
           top: '0px',
+          right: '0px',
           height: '100vh',
-          width: '100vw',
-          background: 'pink',
+          width: '35vw',
+          background: 'white',
           zIndex: 999
         }}
       />

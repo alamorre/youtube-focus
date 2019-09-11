@@ -10,17 +10,7 @@ class SearchCover extends Component {
 
     {/* Cover Everything if Focused */}
     return(
-      <div
-        id='search-cover'
-        style={{
-          position: 'fixed',
-          top: '0px',
-          height: '100vh',
-          width: '100vw',
-          background: 'blue',
-          zIndex: 999
-        }}
-      />
+      <div />
     )
   }
 }
