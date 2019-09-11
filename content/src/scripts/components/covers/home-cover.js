@@ -18,7 +18,7 @@ class HomeCover extends Component {
           height: '100vh',
           width: '100vw',
           background: 'white',
-          zIndex: 999
+          zIndex: 99
         }}
       />
     )
