@@ -9,6 +9,7 @@
   },
   "author": "Adam La Morre",
   "dependencies": {
+    "antd": "^3.23.2",
     "history": "^4.9.0",
     "react": "^15.5.0",
     "react-dom": "^15.5.0",

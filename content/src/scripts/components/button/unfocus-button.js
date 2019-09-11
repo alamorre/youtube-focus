@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { styles } from './styles';
+import { Icon } from 'antd';
 
 class UnfocusButton extends Component {
   render(){
@@ -10,11 +11,29 @@ class UnfocusButton extends Component {
           width: '80px',
           height: '80px',
           cursor: 'pointer',
-          background: 'grey',
+          background: '#fff',
+          border: '2px solid #f5222d',
           borderRadius: '80px',
           boxShadow: '4px 4px 4px grey',
+          textAlign: 'center',
         }}>
+          <div style={{ position: 'relative', top: '8px' }}>
+            {/* Icon to Focus */}
+            <Icon
+              type="rollback"
+              style={{
+                color: '#f5222d',
+                fontSize: '26px',
+                position: 'relative',
+                top: '8px'
+              }}
+            />
 
+            {/* Focus Text */}
+            <div style={{ color: '#f5222d', fontSize: '14px', fontWeight: '400', position: 'relative', top: '3px' }}>
+              Reset
+            </div>
+          </div>
         </div>
       </div>
     )
