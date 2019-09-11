@@ -15,20 +15,6 @@ class BigButton extends Component {
     });
   }
 
-  /**
-  * Update the current route three times a second
-  */
-  componentDidMount(){
-    setInterval(function(){
-      console.log(this.props.route)
-
-      this.props.dispatch({
-        type: 'SET_ROUTE',
-        payload: window.location.pathname
-      });
-    }.bind(this), 333);
-  }
-
   render(){
     return(
       <div id='button-toggler' onClick={this.onButtonClick.bind(this)}>
@@ -45,8 +31,7 @@ class BigButton extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    focus: state.focus,
-    route: state.route
+    focus: state.focus
   };
 };
 

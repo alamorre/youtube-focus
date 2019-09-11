@@ -1,19 +1,8 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 import { styles } from './styles';
 
 class UnfocusButton extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  onButtonClick(){
-    this.props.dispatch({
-      type: 'TOGGLE_FOCUS'
-    });
-  }
-
   render(){
     return (
       <div style={ styles.button }>
@@ -25,16 +14,11 @@ class UnfocusButton extends Component {
           borderRadius: '80px',
           boxShadow: '4px 4px 4px grey',
         }}>
+
         </div>
       </div>
     )
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    focus: state.focus
-  };
-};
-
-export default connect(mapStateToProps)(UnfocusButton);
+export default UnfocusButton;
