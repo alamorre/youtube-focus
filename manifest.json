@@ -23,5 +23,10 @@
   "permissions": [
     "tabs",
     "*://www.youtube.com/*"
-  ]
+  ],
+  "icons": {
+    "128": "focus128.png",
+    "48": "focus48.png",
+    "16": "focus16.png"
+  }
 }

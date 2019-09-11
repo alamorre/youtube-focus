@@ -60,6 +60,7 @@ gulp.task('watch', ['default'], () => {
   gulp.watch('popup/**/*', ['build']);
   gulp.watch('content/**/*', ['build']);
   gulp.watch('event/**/*', ['build']);
+  gulp.src('assets/*').pipe(gulp.dest('./build'));
 });
 
 gulp.task('default', ['build']);
