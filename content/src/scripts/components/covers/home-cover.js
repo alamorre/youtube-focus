@@ -25,7 +25,7 @@ class HomeCover extends Component {
         <img
           alt='youtube-focus-logo'
           src='https://houseprojectuploads.s3.ca-central-1.amazonaws.com/public/youtube-focus-logo.png'
-          style={{ width: '400px', position: 'relative', top: '22vh', right: '3vw' }}
+          style={{ width: '400px', position: 'relative', top: '22vh', right: '1.8vw' }}
         />
       </div>
     )
