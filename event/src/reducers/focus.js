@@ -14,9 +14,12 @@ export default (state = initialState, action) => {
       // Return the new state
       return !state;
 
-    // Regardless set the CSS for theatre over button
+    // Bring theatre in front of buttons
+    case 'PREP_THEATRE':
+      chrome.tabs.insertCSS(null, { code: "#player-theater-container{ z-index: 200 !important; }", allFrames: false }, function() { console.log('Theater in front') })
+      return state;
+
     default:
-      chrome.tabs.insertCSS(null, { code: "#player-theater-container{ z-index: 200 !important; }", allFrames: true }, function() { console.log('Theater in front') })
       return state;
   }
 };

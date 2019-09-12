@@ -9,6 +9,14 @@ class App extends Component {
   * Update the current route three times a second
   */
   componentDidMount(){
+    // Set the theatre to front
+    document.addEventListener('click', () => {
+      this.props.dispatch({
+        type: 'PREP_THEATRE'
+      });
+    });
+
+    // Keep updating the URL
     setInterval(function(){
       this.props.dispatch({
         type: 'SET_ROUTE',
