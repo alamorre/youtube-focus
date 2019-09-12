@@ -12,9 +12,3 @@ ytd-watch-next-secondary-results-renderer {
 #guide-content {
   display: flex !important;
 }
-
-/* Search Form */
-#search-form {
-  position: relative !important;
-  top: 0vh !important;
-}

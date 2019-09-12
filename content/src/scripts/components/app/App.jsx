@@ -9,11 +9,9 @@ class App extends Component {
   * Update the current route three times a second
   */
   componentDidMount(){
-    // Set the theatre to front
     document.addEventListener('click', () => {
-      this.props.dispatch({
-        type: 'PREP_THEATRE'
-      });
+      // Prepare Theatre in fron of button
+      this.props.dispatch({ type: 'PREP_THEATRE' });
     });
 
     // Keep updating the URL
@@ -23,6 +21,15 @@ class App extends Component {
         payload: window.location.pathname
       });
     }.bind(this), 333);
+  }
+
+  componentDidUpdate(){
+    // Lower bar is Focusing and on Home
+    if(this.props.focus && this.props.route === '/'){
+      this.props.dispatch({ type: 'LOWER_SEARCH' });
+    } else {
+      this.props.dispatch({ type: 'RAISE_SEARCH' });
+    }
   }
 
   render() {
@@ -40,6 +47,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
+    focus: state.focus,
     route: state.route
   };
 };
