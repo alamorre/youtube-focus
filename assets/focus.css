@@ -7,3 +7,12 @@ ytd-browse {
 ytd-watch-next-secondary-results-renderer {
   display: none !important;
 }
+
+/* Left Hand Side-Bar */
+#guide-content {
+  display: none !important;
+  background: #fff !important;
+}
+#guide-wrapper {
+  background: #fff !important;
+}
