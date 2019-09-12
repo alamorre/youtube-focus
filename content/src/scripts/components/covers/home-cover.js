@@ -18,9 +18,16 @@ class HomeCover extends Component {
           height: '100vh',
           width: '100vw',
           background: 'white',
-          zIndex: 99
+          zIndex: 99,
+          textAlign: 'center'
         }}
-      />
+      >
+        <img
+          alt='youtube-focus-logo'
+          src='https://houseprojectuploads.s3.ca-central-1.amazonaws.com/public/youtube-focus-logo.png'
+          style={{ width: '400px', position: 'relative', top: '22vh' }}
+        />
+      </div>
     )
   }
 }
