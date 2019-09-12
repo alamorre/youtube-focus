@@ -5,11 +5,9 @@ export default (state = initialState, action) => {
     case 'TOGGLE_FOCUS':
       // If we're now focusing, inject CSS
       if(!state){
-        chrome.tabs.insertCSS(null, { code: "ytd-watch-next-secondary-results-renderer{ display: none !important; }", allFrames: true }, function() { console.log('Watch next off') })
-        chrome.tabs.insertCSS(null, { code: "ytd-browse{ display: none !important; }", allFrames: true }, function() { console.log('Home recommendations off') })
+        chrome.tabs.insertCSS(null, { file: "focus.css", allFrames: true }, function() { console.log('Focus style on') })
       } else {
-        chrome.tabs.insertCSS(null, { code: "ytd-watch-next-secondary-results-renderer{ display: flex !important; }", allFrames: true }, function() { console.log('Watch next on') })
-        chrome.tabs.insertCSS(null, { code: "ytd-browse{ display: flex !important; }", allFrames: true }, function() { console.log('Home recommendations on') })
+        chrome.tabs.insertCSS(null, { file: "unfocus.css", allFrames: true }, function() { console.log('Focus style off') })
       }
       // Return the new state
       return !state;
