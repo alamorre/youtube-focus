@@ -1,0 +1,9 @@
+/* Home Page Recommendations */
+ytd-browse {
+  display: flex !important;
+}
+
+/* Video Page Recommendations */
+ytd-watch-next-secondary-results-renderer {
+  display: flex !important;
+}
