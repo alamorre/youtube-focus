@@ -12,6 +12,16 @@ export default (state = initialState, action) => {
       // Return the new state
       return !state;
 
+    // Run the focus files
+    case 'SET_FOCUS':
+      chrome.tabs.insertCSS(null, { file: "focus.css", allFrames: true }, function() { console.log('Focus style on') })
+      return state;
+
+    // Run the unfocus files
+    case 'SET_FOCUS':
+      chrome.tabs.insertCSS(null, { file: "focus.css", allFrames: true }, function() { console.log('Focus style on') })
+      return state;
+
     // Bring theatre in front of buttons
     case 'LOWER_SEARCH':
       chrome.tabs.insertCSS(null, { file: "focus-search.css", allFrames: false }, function() { console.log('Lower search bar') })

@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "YouTube Focus",
   "description": "Turn YouTube's distractions off and on as you wish!",
-  "version": "0.0.0.1",
+  "version": "0.0.0.3",
   "background": {
     "scripts": [
       "event.js"
@@ -22,7 +22,7 @@
   ],
   "permissions": [
     "tabs",
-    "*://www.youtube.com/*"
+    "*://*/*"
   ],
   "icons": {
     "128": "focus128.png",

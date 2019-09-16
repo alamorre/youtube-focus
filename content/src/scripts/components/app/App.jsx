@@ -9,12 +9,16 @@ class App extends Component {
   * Update the current route three times a second
   */
   componentDidMount(){
-    document.addEventListener('click', () => {
-      // Prepare Theatre in fron of button
+    if(this.props.focus && this.props.route === '/'){
+      this.props.dispatch({ type: 'SET_FOCUS' });
       this.props.dispatch({ type: 'PREP_THEATRE' });
-    });
+      this.props.dispatch({ type: 'LOWER_SEARCH' });
+    } else {
+      this.props.dispatch({ type: 'SET_UNFOCUS' });
+      this.props.dispatch({ type: 'PREP_THEATRE' });
+      this.props.dispatch({ type: 'RAISE_SEARCH' });
+    }
 
-    // Keep updating the URL
     setInterval(function(){
       this.props.dispatch({
         type: 'SET_ROUTE',
